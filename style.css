@@ -1,0 +1,576 @@
+@keyframes text{
+    
+    0%{
+        opacity:0;
+        color:white;
+        margin-bottom: -40px;
+    }
+    30%{
+        opacity:1;
+        letter-spacing:15px;
+        margin-bottom:-40px;
+        color: transparent;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    
+    }
+        85%{
+            opacity:1;
+            letter-spacing:8px;
+            margin-bottom:-40px;
+    
+    
+        }
+    
+        95%{
+            opacity:1;
+           
+           
+        
+        }
+        100%{
+            animation-duration: 10s;
+            opacity:1;
+    
+    
+        }
+    }
+
+@keyframes fadeIn{
+            from{opacity:0;}
+            to {opacity:1;}
+}
+
+
+
+       
+@keyframes fadeInLeft {
+    from {
+        opacity:0;
+        -webkit-transform: translatex(-100px);
+        -moz-transform: translatex(-100px);
+        -o-transform: translatex(-100px);
+        transform: translatex(-100px);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+
+body.tutorial {
+    --color-bg: beige;
+    --color-text: #fff;
+    --color-link: #ff0000;
+    background-color: var(--color-bg);
+  }
+  .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page__inner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  .cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: var(--color-text);
+  }
+  .cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+  }
+
+  .page, .page a {
+    cursor: none;
+   }
+.e{
+
+
+opacity:0;
+font-family:Le Jour Script;
+font-size:50px;
+animation-name:fadeIn;
+animation-iteration-count:1;
+animation-timing-function:ease-in;
+animation-duration:2s;
+position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+
+}
+
+.grid-container {
+    background: #efefef;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  @supports (display: grid) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: "header header header" "title title footer" "main main main";
+    }
+    @media screen and (max-width: 500px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr auto 1fr;
+        grid-template-areas: "header" "title" "main" "footer";
+      }
+    }
+
+    .head{
+        top:100px;
+        left:100px;
+        font-family: alegreya;
+        font-weight: bold;
+        font-size:40px;
+        padding-left:60px;
+        position: relative;
+
+
+    }
+    .eternal{
+        font-family:alegreya;
+        font-weight: bold;
+        font-size:50px;
+        top:80px;
+        left:150px;
+        position:relative;
+        padding-left:40px;
+
+
+
+    }
+
+    .inf{
+
+        font-family:alegreya;
+        font-weight: bold;
+        font-size:20px;
+        padding-left:50px;
+        top:80px;
+        left:180px;
+        position: relative;
+
+
+    }
+  
+    .grid-item {
+      color: #fff;
+      background:white;
+      padding: 3.5em 15em;
+      font-size: 1em;
+      font-weight: 700;
+    }
+
+    .lable{
+        font-family: alegreya;
+        font-size:10px;
+        font-weight: bold;
+        position: relative;
+        top:50px;
+
+    }
+    .items {
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(0.98);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+      }
+    
+      .items.active {
+        background: rgba(255, 255, 255, 0.3);
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        transform: scale(1);
+      }
+    
+      .item {
+        display: inline-block;
+        background-image: url("https://img.babsta.net/UjUqpf2Qwx6MI1vcz8wg8wMrvW0=/fit-in/586x814/a4e86b6e48104883abbd8b9cddc59b61");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 250px;
+        min-width: 400px;
+        margin: 2em 1em;
+      }
+      @media screen and (max-width: 500px) {
+        .item {
+          min-height: 200px;
+          min-width: 200px;
+        }
+      }
+    }  
+
+
+
+
+
+.half
+{
+
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 190px;
+    background-position: center;
+    background-size:100% 100%;
+    transition: all 1s;
+    cursor:none;
+}
+
+/* Circle behind */
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+.msg{
+
+    position: absolute;
+    font-family: vollkorn;
+    color: black;
+    top:5%;
+    left:10%;
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;
+    -o-animation-duration:5s;
+    animation-delay: 8s;
+}
+
+    .m1,
+.m3
+{
+    font-weight:bold;
+    font-size:80px;
+    font-family:alegreya;
+    letter-spacing:-5px;
+
+}
+.m2,
+.m4{
+    font-style:italic;
+    font-size:100px;
+    letter-spacing:1px;
+
+}
+
+
+.new{
+position:relative;
+height:600px;
+top:20px;
+width:100%;
+background-color:beige;
+
+
+}
+
+#nav-container{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    margin:-3em;
+}
+
+/*toggle-icon*/
+.toggle-icon {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: -2.2em auto 0 0.2em;
+    -webkit-transition: margin 600ms;
+    -moz-transition: margin 600ms;
+    transition: margin 600ms;
+    cursor: pointer;
+}
+
+.toggle-icon .bar {
+    display: block;
+    width: 3.8em;
+    height: 0.1em;
+    margin: 0.9em;
+    border-right: 2.8em solid black;
+    border-left: 0.6em solid #d6d6d6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+    -moz-transition-property: -moz-transform, margin, border-right-color, box-shadow;
+    transition-property: transform, margin, border-right-color, box-shadow;
+    -webkit-transition-duration: 600ms;
+    -moz-transition-duration: 600ms;
+    transition-duration: 600ms;
+}
+    .toggle-icon .bar:nth-of-type(1) {
+        -webkit-transition: opacity 300ms;
+        -moz-transition: opacity 300ms;
+        transition: opacity 300ms;
+    }
+    .toggle-icon .bar:nth-of-type(2) {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+
+/*pushed*/
+.pushed .toggle-icon {
+    margin: -3.2em 0 0 0.7em;
+}
+
+    .pushed .bar:nth-of-type(1) {
+        opacity: 0;
+    }
+
+    .pushed .bar:nth-of-type(2) {
+        margin-left: 1.4em;
+        -webkit-transform: rotate(-137deg) translateY(-1.5em);
+        -moz-transform: rotate(-137deg) translateY(-1.5em);
+        -ms-transform: rotate(-137deg) translateY(-1.5em);
+        -o-transform: rotate(-137deg) translateY(-1.5em);
+        transform: rotate(-137deg) translateY(-1.5em);
+    }
+
+    .pushed .bar:nth-of-type(3) {
+        margin-left: 0.5em;
+        -webkit-transform: rotate(-42deg);
+        -moz-transform: rotate(-42deg);
+        -ms-transform: rotate(-42deg);
+        -o-transform: rotate(-42deg);
+        transform: rotate(-42deg);
+    }
+
+
+.pushed .toggle-icon:hover .bar:nth-of-type(2) {
+    border-right-color: #e9b8b9;
+    box-shadow: 0.4em 0 0.6em 0.1em pink;
+}
+.pushed .toggle-icon:hover .bar:nth-of-type(3) {
+    border-right-color: #ddf1da;
+    box-shadow: 0.4em 0 0.6em 0.1em beige;
+}
+
+.m5{
+
+    
+    font-family:vollkorn;
+    font-size:20px;
+
+
+
+}
+.distortion{
+    width: 660px;
+    height: 500px;
+    position: relative;
+    top: 0px;
+    background-position: center;
+    background-size:100% 100%;
+    transition: all 1s;
+    cursor:none;
+
+    background-image:linear-gradient(grey);
+        background-blend-mode:soft-light;
+        -webkit-animation-name: fadeInLeft;
+        -moz-animation-name: fadeInLeft;
+        -o-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-duration: 5s;
+        -moz-animation-duration: 5s;
+        -o-animation-duration: 5s;
+        animation-duration: 5s;
+        -webkit-animation-delay: 16s;
+        -moz-animation-delay: 16s;
+        -o-animation-duration:5s;
+        animation-delay: 5s;
+        
+    
+    }
+    .distortion
+    {
+
+
+        left:0;
+    }
+
+    .half{
+
+        right:0%;
+    
+    
+    }
+
+    .distortion::before,
+.half::before{
+
+    content: '';
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background:linear-gradient(45deg,tan,maroon);
+    opacity: 0.3;
+    
+
+}
+.bg{
+
+    height:100%;
+    width:100%;
+    background-color: tan;
+
+
+
+
+}
+
+
+.half::before{
+
+    background:beige;
+    background-blend-mode:soft-light;
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;
+    -o-animation-duration:5s;
+    animation-delay: 7s;
+
+}
+
+div.container
+{
+    font-family: alegreya;
+    margin: 0 auto;
+	padding: 5em 3em;
+	text-align: center;
+}
+
+
+div.container a
+{   
+    color: black;
+    text-decoration: none;
+    font: 20px alegreya;
+    margin: 5px 15px;
+    padding: 5px 20px ;
+
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+div.c1
+{
+    font-family: alegreya;
+    margin: 0 auto;
+	text-align: right;
+}
+
+
+div.c1 a
+{   
+    color:black;
+    text-decoration: none;
+    font: 15px alegreya;
+    font-weight: bold;
+    margin: 5px 15px;
+    padding: 5px 15px ;
+    bottom: 100px;
+
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
